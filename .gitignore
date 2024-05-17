@@ -11,7 +11,7 @@ bed/*.bed.gz.tbi
 
 # Binaries
 bin/
-src/wally
+src/jally
 src/ocv
 src/opencv_js
 src/emsdk

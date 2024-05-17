@@ -84,7 +84,7 @@ namespace wallysworld
   template<typename TConfigStruct>
   inline int wallyRun(TConfigStruct& c) {
 #ifdef PROFILE
-    ProfilerStart("wally.prof");
+    ProfilerStart("jally.prof");
 #endif
 
     // Get library parameters
@@ -497,7 +497,7 @@ namespace wallysworld
     // Check command line arguments
     if ((vm.count("help")) || (!vm.count("input-file")) || (!vm.count("genome"))) { 
       std::cout << std::endl;
-      std::cout << "Usage: wally " << argv[0] << " [OPTIONS] -g <ref.fa> <sample1.sort.bam> <sample2.sort.bam> ..." << std::endl;
+      std::cout << "Usage: Jally " << argv[0] << " [OPTIONS] -g <ref.fa> <sample1.sort.bam> <sample2.sort.bam> ..." << std::endl;
       std::cout << visible_options << "\n";
       return 0;
     }
@@ -545,7 +545,7 @@ namespace wallysworld
     // Show cmd
     boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();
     std::cout << '[' << boost::posix_time::to_simple_string(now) << "] ";
-    std::cout << "wally ";
+    std::cout << "jally ";
     for(int i=0; i<argc; ++i) { std::cout << argv[i] << ' '; }
     std::cout << std::endl;
     
