@@ -15,10 +15,8 @@ namespace wallysworld
     void printTitle(std::string const& title) 
     {
       std::cout << "**********************************************************************" << std::endl;
-      std::cout << "Program: Jally" << std::endl;
+      std::cout << "Program: "<< title << " (Version: " << jallyVersionNumber << ")"<< std::endl;
       std::cout << "This program Use for plot reads from bam" << std::endl;
-      std::cout <<  std::endl;
-      std::cout <<  title << " (Version: " << jallyVersionNumber << ")" << std::endl;
       std::cout << "Contact: jiangchen2 (jiangchen2@genomics.com)" << std::endl;
       std::cout << "**********************************************************************" << std::endl;
       std::cout << std::endl;

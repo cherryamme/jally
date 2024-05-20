@@ -19,8 +19,8 @@ displayUsage() {
   std::cout << "Usage: Jally <command> <arguments>" << std::endl;
   std::cout << std::endl;
   std::cout << "    region         plot genomic region" << std::endl;
-  //std::cout << "    hilbert        plot genomic region as hilbert curve" << std::endl; 
-  std::cout << std::endl;
+  std::cout << "    version        show jally and requirments version" << std::endl; 
+  std::cout << "    help           show jally help" << std::endl; 
   std::cout << std::endl;
 }
 
@@ -35,6 +35,7 @@ int main(int argc, char **argv) {
       std::cout << "Jally version: v" << jallyVersionNumber << std::endl;
       std::cout << " using Boost: v" << BOOST_VERSION / 100000 << "." << BOOST_VERSION / 100 % 1000 << "." << BOOST_VERSION % 100 << std::endl;
       std::cout << " using HTSlib: v" << hts_version() << std::endl;
+      std::cout << " using OpenCV: v" << CV_VERSION  << std::endl;
       return 0;
     }
     else if ((std::string(argv[1]) == "help") || (std::string(argv[1]) == "--help") || (std::string(argv[1]) == "-h") || (std::string(argv[1]) == "-?")) {
