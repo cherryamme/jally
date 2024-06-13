@@ -1,3 +1,9 @@
+
+git clone https://github.com/cherryamme/jally.git
+git submodule update --init --recursive --progress
+
+
+
 jally needs a sorted and indexed BAM/CRAM file and a reference genome. The output is a genomic alignment plot of the region specified on the command-line.
 
 `jally region -r chrA:35-80 -g <genome> <input.bam>`

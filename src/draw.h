@@ -281,8 +281,8 @@ namespace wallysworld
       std::string text = "[0-"; 
       text += boost::lexical_cast<std::string>(maxObsCov);
       text += "]";
-      double font_scale = 0.4;
-      double font_thickness = 1.5;
+      double font_scale = 0.6;
+      double font_thickness = 2;
       int32_t baseline = 0;
       cv::Size textSize = cv::getTextSize(text, cv::FONT_HERSHEY_DUPLEX, font_scale, font_thickness, &baseline);
       cv::Rect rect(0,  track * c.tlheight - textSize.height/2, textSize.width, textSize.height);
@@ -294,13 +294,13 @@ namespace wallysworld
   template<typename TConfig>
   inline void
   drawSampleLabel(TConfig const& c, int32_t const track, std::string const& text, cv::Mat& img) {
-    double font_scale = 0.4;
-    double font_thickness = 1.5;
+    double font_scale = 0.8;
+    double font_thickness = 2.4;
     int32_t baseline = 0;
     cv::Size textSize = cv::getTextSize(text, cv::FONT_HERSHEY_DUPLEX, font_scale, font_thickness, &baseline);
-    cv::Rect rect(0,  track * c.tlheight - textSize.height, textSize.width, textSize.height);
+    cv::Rect rect(5,  track * c.tlheight - textSize.height, textSize.width+2, textSize.height+2);
     cv::rectangle(img, rect, cv::Scalar(0, 255, 255), -1);
-    cv::putText(img, text, cv::Point(0, track * c.tlheight), cv::FONT_HERSHEY_SIMPLEX, font_scale, cv::Scalar(0, 0, 0), font_thickness, cv::LINE_AA);
+    cv::putText(img, text, cv::Point(6, track * c.tlheight), cv::FONT_HERSHEY_SIMPLEX, font_scale, cv::Scalar(0, 0, 0), font_thickness, cv::LINE_AA);
   }
 
   
